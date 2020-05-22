@@ -1,0 +1,108 @@
+
+<div class=" page">
+    <nav class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white border-bottom box-shadow">
+      <h5 class="my-0 mr-md-auto font-weight-normal">
+        <a href="http://nxtgrid.co/">
+            <img src="/src/assets/logo.png" alt="NXTGRID" height="50px">
+        </a>
+      </h5>
+      
+        <div class="my-2 my-md-0 mr-md-3" >
+          <a class="p-2 text-dark" href="http://nxtgrid.co/become_a_franchisee">
+            Become a franchisee
+          </a>         
+        </div>
+        <a class="btn btn-outline-primary" href="http://nxtgrid.co/contact">
+          Contact
+        </a>
+      </nav>
+
+      <header>
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+          <source src="" type="video/mp4">   
+            <!-- https://storage.googleapis.com/nxt_web_site/1.mp4        -->
+        </video>
+        <div class="container h-100">
+          <div class="d-flex h-100 text-center align-items-center">
+            <div class="w-100 text-white">
+              <h4 class="display-4">
+                Mini-grids made profitable
+              </h4>
+              <br>
+              <h5>Profitable, Clean Mini-Grids Everywhere, By Everyone</h5>
+              <br>
+              <br>
+              <div class="row">
+                <div class="col-md-6 offset-md-3">
+                  <div class="d-flex justify-content-center">
+                    <form method="post">
+                    <div class="row">
+                      <div class="col-6">
+                        <input type="email" name="email" class="form-control input-lg" style="height: 48px" id="inputPassword2" placeholder="Email">             
+                      </div>
+                      <div class="col-6">
+                        <button type="submit" class="btn btn-primary btn-lg mb-2">keep me posted</button>
+                      </div>
+                    </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    <section class="nxt-index-section-lg" style="background-color: #eaeff4;">
+    <div class="container">
+      <div class="row">
+        <div class="col-6" style="text-align: center;">
+        <img src="/src/assets/wrench.png" class="img-fluid" style="height: 300px;" alt="Responsive image">
+        </div>
+        <div class="col-6 machineList" style="text-align: left;">
+          <h3>NXTGRID machines</h3>  
+          <table class="table table-hover">
+              <thead class="thead-dark">
+                  <tr id="showMachine">
+                      <div class="form-group col-md-4">
+                         
+                          <label for="inputState">List of Machines</label>
+                          <select id="inputState" class="form-control">
+                            <option selected>MACHINE_1</option>
+                            <option>MACHINE_2</option>
+                            <option>MACHINE_3</option>
+                          </select>
+                        </div>
+                      
+                  </tr>
+              </thead>
+          
+              <tbody>
+                  <tr *ngFor="let tempMachine of machines">
+                      <td>{{ tempMachine.httpClient }}</td>
+                      <!-- <td>{{ tempMachine.name }}</td>
+                      <td><a href="https://docs.google.com/spreadsheets/d/1Qw1uSEIjANswrSrza09yoYOt1p8CBzAThy8MGznz1OQ/edit#gid=0">Dataset line chart</a></td> -->
+          
+                  </tr>
+          
+              </tbody>
+          
+          </table>
+        </div>
+      </div>
+    </div>
+    </section>
+    <div class="row">
+        <div class="col-md">
+          
+        </div>
+        <div class="col-md ">
+             
+        </div>
+        <div class="col-md">
+          
+        </div>
+        
+
+</div>
+</div>
