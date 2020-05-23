@@ -61,48 +61,45 @@
         </div>
         <div class="col-6 machineList" style="text-align: left;">
           <h3>NXTGRID machines</h3>  
-          <table class="table table-hover">
-              <thead class="thead-dark">
-                  <tr id="showMachine">
-                      <div class="form-group col-md-4">
-                         
-                          <label for="inputState">List of Machines</label>
-                          <select id="inputState" class="form-control">
+                <div class="tab-content">
+                  <div class="tab-pane container active in"><br>
+                    <div class="row">
+              
+                    <div class="card col-3" *ngFor="let machine of machines">
+                      <div class="card-body">
+                        <h5 class="card-title">{{machine.MACHINE_2}}</h5>
+            
+                        <p class="card-text">{{machine?.MACHINE_2}}</p>
+                        <h4 class="card-text">${{machine?.MACHINE_3}}</h4>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-4">                         
+                          
+                          <div class="spinner-border text-danger" *ngIf="machines.length === 0" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>                       
+                            <div class="form-group col-md-4" *ngFor="let tempMachine of machines">
+                              <label for="inputState">List of Machines</label>
+                              <select  id="inputState" class="form-control"> 
+                                <option> {{tempMachine}}</option> 
+                              </select>
+                            </div>
+                          
+                          <!-- <select *ngfor="let machine of machines" id="inputState" class="form-control">
                             <option selected>MACHINE_1</option>
                             <option>MACHINE_2</option>
                             <option>MACHINE_3</option>
-                          </select>
+                          </select> -->
                         </div>
-                      
-                  </tr>
-              </thead>
-          
-              <tbody>
-                  <tr *ngFor="let tempMachine of machines">
-                      <td>{{ tempMachine.httpClient }}</td>
-                      <!-- <td>{{ tempMachine.name }}</td>
-                      <td><a href="https://docs.google.com/spreadsheets/d/1Qw1uSEIjANswrSrza09yoYOt1p8CBzAThy8MGznz1OQ/edit#gid=0">Dataset line chart</a></td> -->
-          
-                  </tr>
-          
-              </tbody>
-          
-          </table>
+                        </div>
         </div>
       </div>
     </div>
     </section>
-    <div class="row">
-        <div class="col-md">
-          
-        </div>
-        <div class="col-md ">
-             
-        </div>
-        <div class="col-md">
-          
-        </div>
-        
-
-</div>
+    
 </div>

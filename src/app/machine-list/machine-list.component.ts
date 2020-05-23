@@ -10,15 +10,18 @@ import { DataService } from '../data.service';
 export class MachineListComponent implements OnInit {
 
   machines = [];
+  
   constructor(private dataService: DataService) { }
 
   ngOnInit(){
     this.dataService.sendGetRequest().subscribe((data: any[])=>{
       console.log(data);
+      // ['machines'][1]
       this.machines = data;
+      
     })
   }
-  machineList = [
-    this.ngOnInit()
-  ]
+  // machineList = [
+  //   this.ngOnInit()
+  // ]
 }
